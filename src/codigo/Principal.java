@@ -4,11 +4,19 @@
  * and open the template in the editor.
  */
 package codigo;
+import java.io.File;
 
 /**
  *
  * @author juanfuentesleon
  */
 public class Principal {
-    
+    public static void main(String[] args) {
+        String ruta = "/Users/juanfuentesleon/NetBeansProjects/AnalizadorLexico1/src/codigo/Lexer.flex";
+        generarLexer(ruta);
+    }
+    public static void generarLexer(String ruta){
+        File archivo = new File(ruta);
+        JFlex.Main.generate(archivo);
+    }
 }
